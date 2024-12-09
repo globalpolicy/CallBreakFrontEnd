@@ -1,4 +1,4 @@
-const BASE_URL = 'https://localhost:7211';
+const BASE_URL = 'https://immensely-outgoing-barnacle.ngrok-free.app';
 
 export const API_ROUTES = {
 	GoogleSignOn: `${BASE_URL}/api/auth/googlesignon`,
@@ -164,7 +164,8 @@ export async function SetProfileInfo(
 		}),
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: 'Bearer ' + jwt
+			Authorization: 'Bearer ' + jwt,
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -176,7 +177,8 @@ export async function GetGameWiseScores(roomUid: string): Promise<GetGameWiseSco
 	const response = await fetch(API_ROUTES.GetGameWiseScores + `/${roomUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -195,7 +197,8 @@ export async function DeclareScore(
 			predictedScore: declaredScore
 		}),
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -207,7 +210,8 @@ export async function GetScores(playerUid: string): Promise<GetScoresInfo> {
 	const response = await fetch(API_ROUTES.GetScores + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -223,7 +227,8 @@ export async function PlayCard(playerUid: string, cardName: string): Promise<Pla
 			card: cardName
 		}),
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -235,7 +240,8 @@ export async function GetLatestPlay(playerUid: string): Promise<GetLatestPlayInf
 	const response = await fetch(API_ROUTES.GetLatestPlay + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -247,7 +253,8 @@ export async function StartNewGame(adminPlayerUid: string): Promise<StartNewGame
 	const response = await fetch(API_ROUTES.StartNewGame + `/${adminPlayerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -259,7 +266,8 @@ export async function GetDiscardPile(playerUid: string): Promise<GetDiscardPileI
 	const response = await fetch(API_ROUTES.GetDiscardPile + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -272,7 +280,8 @@ export async function GetMyHand(playerUid: string): Promise<GetMyHandInfo> {
 	const response = await fetch(API_ROUTES.GetMyHand + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -284,7 +293,8 @@ export async function GetPlayersHandCounts(playerUid: string): Promise<GetPlayer
 	const response = await fetch(API_ROUTES.GetPlayersHandCounts + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -305,7 +315,8 @@ export async function DoesActiveGameExist(playerUid: string): Promise<DoesActive
 	const response = await fetch(API_ROUTES.DoesActiveGameExist + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -322,7 +333,8 @@ export async function CreateRoom(
 		body: JSON.stringify(numberOfPlayers),
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: 'Bearer ' + jwt
+			Authorization: 'Bearer ' + jwt,
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -335,7 +347,8 @@ export async function GetRoomDetails(jwt: string): Promise<GetRoomDetailsRespons
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: 'Bearer ' + jwt
+			Authorization: 'Bearer ' + jwt,
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -351,7 +364,8 @@ export async function JoinRoom(playerName: string, roomUid: string): Promise<Joi
 			roomUid: roomUid
 		}),
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -363,7 +377,8 @@ export async function GetPlayerDetails(playerUid: string): Promise<GetPlayerDeta
 	const response = await fetch(API_ROUTES.GetPlayerDetails + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
@@ -375,7 +390,8 @@ export async function GetRoomPlayers(playerUid: string): Promise<GetRoomPlayersI
 	const response = await fetch(API_ROUTES.GetRoomPlayers + `/${playerUid}`, {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 

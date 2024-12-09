@@ -5,7 +5,8 @@ export async function getUserDetails(accessToken_: string, refreshToken_: string
 	const response = await fetch(API_ROUTES.GetUserDetails, {
 		method: 'GET',
 		headers: {
-			Authorization: 'Bearer ' + accessToken_
+			Authorization: 'Bearer ' + accessToken_,
+			'ngrok-skip-browser-warning': 'dont matter'
 		}
 	});
 
