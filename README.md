@@ -1,38 +1,41 @@
-# sv
+# CallBrelte
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Digital implementation of the popular card game 'CallBreak'
 
-## Creating a project
+## Core features
 
-If you're seeing this, you've probably already done this step. Congrats!
+There's no particular order to the list:
 
-```bash
-# create a new project in the current directory
-npx sv create
+1. Multi-player online game with realtime interactions. Anywhere from 2 to 6 players.
+2. Register using a Gmail account to become a user, create rooms and invite other players to the room.
+3. No need to register to play; just enter the room UID to join the active game in the room.
+4. The registered user who created the room is the room admin, and controls when to start new games.
+5. Only one active game per room at one time. Starting a new game in the middle of an existing one deactivates it.
+6. Ability to view the the scoreboard of a room's games.
+7. Game states are persistent between browser sessions, so no worries if a player gets knocked offline. It'll still be there when they come back.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Core technologies used
 
-## Developing
+1. Svelte 5 (nod in the name) for the front-end
+2. ASP.NET Core WebApi in .net 8.0 for the back-end
+3. SignalR
+4. EFCore wigh npgsql
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Screenshots:
 
-```bash
-npm run dev
+![image](https://github.com/user-attachments/assets/51ecc01d-d2b3-4c7b-a0ea-fe57387d6263)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+![image](https://github.com/user-attachments/assets/817cd292-0f4e-4391-a07b-c09b73922fa0)
 
-## Building
+![image](https://github.com/user-attachments/assets/4b1366f5-a8b2-4448-8659-2c62ce1d386d)
 
-To create a production version of your app:
+![image](https://github.com/user-attachments/assets/d3d0557b-3d63-472b-af38-e71e810a44e0)
 
-```bash
-npm run build
-```
+## Credits:
 
-You can preview the production build with `npm run preview`.
+The card images are from Chris Aguilar (webmaster@totalnonsense.com)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## More:
+
+Full write-up at [c0dew0rth](https://c0dew0rth.blogspot.com/2024/12/callbreak-online-card-game.html)
+> You can go to [Ajashra](https://callbreak.ajashra.com) to play now
