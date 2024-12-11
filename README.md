@@ -13,6 +13,7 @@ There's no particular order to the list:
 5. Only one active game per room at one time. Starting a new game in the middle of an existing one deactivates it.
 6. Ability to view the the scoreboard of a room's games.
 7. Game states are persistent between browser sessions, so no worries if a player gets knocked offline. It'll still be there when they come back.
+8. Only one active session permitted per player/user. Multiple browsers or devices for the same player or user, and the server notifications won't reach the duplicate clients.
 
 ## Core technologies used
 
